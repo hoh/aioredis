@@ -13,6 +13,7 @@ from .list import ListCommandsMixin
 from .scripting import ScriptingCommandsMixin
 from .server import ServerCommandsMixin
 from .pubsub import PubSubCommandsMixin
+from .stream import StreamCommandsMixin
 from .cluster import ClusterCommandsMixin
 from .geo import GeoCommandsMixin, GeoPoint, GeoMember
 
@@ -33,7 +34,7 @@ class Redis(GenericCommandsMixin, StringCommandsMixin,
             SortedSetCommandsMixin, ListCommandsMixin,
             ScriptingCommandsMixin, ServerCommandsMixin,
             PubSubCommandsMixin, ClusterCommandsMixin,
-            GeoCommandsMixin):
+            GeoCommandsMixin, StreamCommandsMixin):
     """High-level Redis interface.
 
     Gathers in one place Redis commands implemented in mixins.
